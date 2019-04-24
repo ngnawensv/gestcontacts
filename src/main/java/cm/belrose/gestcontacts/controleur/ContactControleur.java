@@ -7,13 +7,11 @@ package cm.belrose.gestcontacts.controleur;
 
 import cm.belrose.gestcontacts.dao.ContactDao;
 import cm.belrose.gestcontacts.entities.Contact;
-import static java.util.Collections.list;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cm.belrose.gestcontacts.dao;
+package cm.belrose.gestcontacts.service;
+
+import cm.belrose.gestcontacts.dao.ContactDao;
 import cm.belrose.gestcontacts.entities.Contact;
 
 /**
  *
  * @author Ngnawen
  */
-public interface ContactDao extends GenericDao<Contact, Long>{
-   // @Query("select c from Contact c where c.nom like:x")
-   // public Page<Contact> chercher(@Param("x") String mot_cle, Pageable pageable);
+public interface ContactService extends GenericService<Contact, Long, ContactDao>{
     
 }
