@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cm.belrose.gestcontacts.dao;
+package cm.belrose.gestcontacts.daoImpl;
+
+import cm.belrose.gestcontacts.dao.ContactDao;
 import cm.belrose.gestcontacts.entities.Contact;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Ngnawen
  */
-public interface ContactDao extends GenericDao<Contact, Long>{
+@Repository
+public class ContactDaoImpl extends GenericDaoImpl<Contact, Long> implements ContactDao {
     
 }
