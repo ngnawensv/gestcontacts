@@ -8,6 +8,8 @@ package cm.belrose.gestcontacts.serviceImpl;
 import cm.belrose.gestcontacts.dao.ContactDao;
 import cm.belrose.gestcontacts.entities.Contact;
 import cm.belrose.gestcontacts.service.ContactService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -15,10 +17,13 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Ngnawen
  */
 @Transactional
+@Service
 public class ContactServiceImpl extends GenericServiceImpl<Contact, Long, ContactDao> implements ContactService {
-
-    public ContactServiceImpl(ContactDao genericDao) {
-        super(genericDao);
+    
+    @Autowired
+    public ContactServiceImpl(ContactDao contactDao) {
+        super(contactDao);
     }
+    
 
 }

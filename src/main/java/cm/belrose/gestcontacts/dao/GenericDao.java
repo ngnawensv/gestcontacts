@@ -7,7 +7,6 @@ package cm.belrose.gestcontacts.dao;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.EntityManager;
 
 /**
  *
@@ -26,9 +25,9 @@ public interface GenericDao<T extends Object, Id extends Serializable> {
     public T update(T t) throws Exception;
 
     public void delete(T t) throws Exception;
+    
+    //public EntityManager getEntityManager();
 
-    public EntityManager getEntityManager();
-
-    public void setEntityManager(EntityManager entityManager);
+    //public void setEntityManager(EntityManager entityManager);
     
 }

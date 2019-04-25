@@ -92,9 +92,4 @@ public abstract class GenericServiceImpl<T extends Object, ID extends Serializab
             throw new Exception("unable to update a" + entityClass.getName(), e);
         }
     }
-
-//	@Override
-//	public Long countAll() throws Exception {
-//		return genericDao.countAll();
-//	}
 }

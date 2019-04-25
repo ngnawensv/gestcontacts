@@ -11,7 +11,5 @@ import cm.belrose.gestcontacts.entities.Contact;
  * @author Ngnawen
  */
 public interface ContactDao extends GenericDao<Contact, Long>{
-   // @Query("select c from Contact c where c.nom like:x")
-   // public Page<Contact> chercher(@Param("x") String mot_cle, Pageable pageable);
     
 }

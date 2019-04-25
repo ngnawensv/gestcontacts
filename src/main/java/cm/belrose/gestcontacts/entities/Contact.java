@@ -7,6 +7,7 @@ package cm.belrose.gestcontacts.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,9 +20,11 @@ import javax.persistence.TemporalType;
  * @author Ngnawen <ngnawens@gmail.com>
  */
 @Entity
-public class Contact implements Serializable{
-    @Id
+public class Contact implements Serializable {
+
+   @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_contact")
     private Long id;
     private String nom;
     private String prenom;
@@ -86,18 +89,4 @@ public class Contact implements Serializable{
     public void setPhoto(String photo) {
         this.photo = photo;
     }
-
-    public Contact() {
-    }
-
-    public Contact(String nom, String prenom, Date date_naissance, String email, Long tel, String photo) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.date_naissance = date_naissance;
-        this.email = email;
-        this.tel = tel;
-        this.photo = photo;
-    }
-    
-    
 }

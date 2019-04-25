@@ -24,9 +24,8 @@ public abstract class GenericDaoImpl<T extends Object, Id extends Serializable> 
 
     @PersistenceContext
     private EntityManager entityManager;
-
+    
     private final Class<T> entityClass;
-
     private CriteriaBuilder cb;
     private CriteriaQuery<T> cq;
 
@@ -61,18 +60,33 @@ public abstract class GenericDaoImpl<T extends Object, Id extends Serializable> 
     }
 
     @Override
+    public void delete(T t) throws Exception {
+        entityManager.remove(t);
+    }
+
     public EntityManager getEntityManager() {
         return entityManager;
     }
 
-    @Override
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    @Override
-    public void delete(T t) throws Exception {
-        entityManager.remove(t);
+    public CriteriaBuilder getCb() {
+        return cb;
     }
+
+    public void setCb(CriteriaBuilder cb) {
+        this.cb = cb;
+    }
+
+    public CriteriaQuery<T> getCq() {
+        return cq;
+    }
+
+    public void setCq(CriteriaQuery<T> cq) {
+        this.cq = cq;
+    }
+   
 
 }
